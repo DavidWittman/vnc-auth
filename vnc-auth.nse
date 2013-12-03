@@ -9,7 +9,7 @@ categories = {"auth"}
 --require "stdnse"
 require "shortport"
 
-portrule = shortport.port_or_service(5900, "vnc")
+portrule = shortport.port_or_service({5900,5901,5902,5903}, "vnc")
 
 action = function(host, port)
     local socket = nmap.new_socket()
